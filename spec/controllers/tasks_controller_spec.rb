@@ -16,4 +16,11 @@ RSpec.describe TasksController, type: :controller do
           expect(assigns(:tasks)).not_to be_nil
        end
     end
+
+    describe 'GET #new' do
+      it 'renders the new template' do
+        get :new
+        expect(response).to render_template(:new)
+      end
+    end
 end
